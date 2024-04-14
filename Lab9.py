@@ -8,7 +8,14 @@ def encoder(password):
     return new_password
 
 def decoder(password):
-    pass
+    temp_string = ""
+    for char in password:
+        char = int(char)-3
+        if char < 0:
+            char = char+10
+        char = str(char)
+        temp_string += char
+    return temp_string
 
 if __name__ == "__main__":
     password = None
